@@ -251,6 +251,11 @@ body {
   transition: all 0.3s ease;
 }
 
+button.btn.btn-custom {
+  margin-left: 10px; 
+  color: white;
+}
+
 .about-image::before {
   content: "";
   position: absolute;
