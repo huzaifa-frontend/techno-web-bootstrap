@@ -21,6 +21,7 @@ body {
   font-family: "Outfit", sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
+  padding-top: 80px; /* Add padding to prevent collision with fixed navbar */
 }
 
 /* Navigation Enhancements */
@@ -29,6 +30,7 @@ body {
   background: rgba(255, 255, 255, 0.95) !important;
   transition: all 0.3s ease;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1050; /* Ensure navbar stays on top */
 }
 
 .navbar.scrolled {
@@ -49,10 +51,16 @@ body {
   transform: scale(1.05);
 }
 
+/* Fix navbar links spacing */
+.navbar-nav .nav-item {
+  margin: 0 15px; /* Add spacing between nav items */
+}
+
 .nav-link {
   position: relative;
   transition: all 0.3s ease;
   font-weight: 500;
+  padding: 8px 16px !important; /* Add padding to nav links */
 }
 
 .nav-link::before {
@@ -73,6 +81,10 @@ body {
 }
 
 /* Carousel Enhancements */
+.carousel {
+  margin-top: -80px; /* Offset the body padding for full-height carousel */
+}
+
 .carousel-item {
   position: relative;
   overflow: hidden;
@@ -80,7 +92,7 @@ body {
 
 .carousel-item img {
   width: 100%;
-  height: 80vh;
+  height: 100vh; /* Full viewport height */
   object-fit: cover;
   transition: transform 0.5s ease;
   filter: brightness(0.8);
@@ -211,13 +223,15 @@ body {
 .btn-custom {
   padding: 12px 30px;
   border: 2px solid var(--primary-color);
-  background: transparent;
-  color: var(--primary-color);
+  background: var(--gradient); /* Set default background */
+  color: white; /* Set default text color to white */
   border-radius: 50px;
   font-weight: 600;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn-custom::before {
@@ -227,7 +241,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: var(--gradient);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%); /* Reverse gradient for hover */
   transition: left 0.3s ease;
   z-index: -1;
 }
@@ -249,11 +263,6 @@ body {
   border-radius: 20px;
   box-shadow: var(--shadow);
   transition: all 0.3s ease;
-}
-
-button.btn.btn-custom {
-  margin-left: 10px; 
-  color: white;
 }
 
 .about-image::before {
@@ -397,6 +406,117 @@ button.btn.btn-custom {
   line-height: 1.6;
 }
 
+/* Team Section - Fix social icons visibility */
+#team {
+  padding: 100px 0;
+}
+
+#team .service-card {
+  text-align: center;
+}
+
+/* Make social icons always visible */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  opacity: 1; /* Always visible */
+}
+
+.social-icon:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon i {
+  font-size: 1rem;
+  color: white;
+}
+
+/* Contact Section - Fix alignment and add proper styling */
+#contact {
+  padding: 100px 0;
+}
+
+.contact-info {
+  padding-right: 2rem;
+}
+
+.contact-info h4 {
+  color: var(--dark-color);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.contact-info h6 {
+  color: var(--dark-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info p {
+  color: var(--secondary-color);
+  margin-bottom: 0;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.contact-form .btn-custom {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+/* Newsletter Form */
+.newsletter-form .input-group {
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-form .form-control {
+  border: none;
+  padding: 15px 20px;
+  background: white;
+}
+
+.newsletter-form .btn-custom {
+  border-radius: 0;
+  border: none;
+}
+
 /* Footer */
 .footer {
   background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
@@ -452,13 +572,13 @@ button.btn.btn-custom {
   padding-left: 10px;
 }
 
-.social-icons {
+.footer .social-icons {
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
 }
 
-.social-icon {
+.footer .social-icon {
   width: 50px;
   height: 50px;
   background: rgba(255, 255, 255, 0.1);
@@ -470,13 +590,13 @@ button.btn.btn-custom {
   backdrop-filter: blur(10px);
 }
 
-.social-icon:hover {
+.footer .social-icon:hover {
   background: var(--gradient);
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.social-icon i {
+.footer .social-icon i {
   font-size: 1.2rem;
   color: white;
 }
@@ -561,8 +681,16 @@ button.btn.btn-custom {
 
 /* Responsive Enhancements */
 @media (max-width: 768px) {
+  body {
+    padding-top: 60px; /* Reduce padding on mobile */
+  }
+
+  .carousel {
+    margin-top: -60px;
+  }
+
   .carousel-item img {
-    height: 60vh;
+    height: 70vh;
   }
 
   .carousel-caption h5 {
@@ -579,6 +707,31 @@ button.btn.btn-custom {
 
   .service-card {
     margin-bottom: 2rem;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 5px 0; /* Stack vertically on mobile */
+  }
+
+  .contact-info {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Additional mobile fixes */
+@media (max-width: 576px) {
+  .contact-form {
+    padding: 1.5rem;
+  }
+  
+  .service-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .service-icon i {
+    font-size: 1.5rem;
   }
 }
 
