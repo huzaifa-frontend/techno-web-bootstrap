@@ -23,7 +23,6 @@
     ></script>
   </head>
   <body>
-
     <!-- Loading Overlay -->
     <div class="loading-overlay" id="loadingOverlay">
       <div class="spinner"></div>
@@ -361,7 +360,7 @@
               <h5>App Development</h5>
               <p>
                 Build powerful mobile and web applications with cutting-edge
-                technologies and frameworks.
+                technologies and frameworks with high-performance.
               </p>
               <a href="#" class="btn btn-custom">Learn More</a>
             </div>
@@ -457,54 +456,64 @@
     <!-- Contact Section -->
     <section id="contact" class="py-5 bg-light">
       <div class="container">
-        <div class="heading fade-in">
-          <h1 class="text-center section-title">Get In Touch</h1>
+        <!-- Heading -->
+        <div class="heading fade-in text-center mb-5">
+          <h1 class="section-title" style="font-weight: 700; color: #6a11cb">
+            Get In Touch
+          </h1>
           <hr class="section-divider" />
         </div>
-        <div class="row">
-          <div class="col-md-6 fade-in">
-            <div class="contact-info">
-              <h4 class="mb-4">Contact Information</h4>
-              <div class="d-flex align-items-center mb-3">
+
+        <div class="row align-items-center">
+          <!-- Contact Info -->
+          <div class="col-md-6 fade-in d-flex justify-content-center">
+            <div class="contact-info w-100" style="max-width: 400px">
+              <h4 class="mb-4" style="font-weight: 700">Contact Information</h4>
+
+              <!-- Address -->
+              <div class="d-flex align-items-center mb-4 gap-3">
                 <div
-                  class="service-icon me-3"
-                  style="width: 50px; height: 50px"
+                  class="service-icon d-flex align-items-center justify-content-center"
                 >
                   <i class="fas fa-map-marker-alt"></i>
                 </div>
                 <div>
-                  <h6>Address</h6>
+                  <h6 class="mb-1">Address</h6>
                   <p class="mb-0">123 Tech Street, Digital City, TC 12345</p>
                 </div>
               </div>
-              <div class="d-flex align-items-center mb-3">
+
+              <!-- Phone -->
+              <div class="d-flex align-items-center mb-4 gap-3">
                 <div
-                  class="service-icon me-3"
-                  style="width: 50px; height: 50px"
+                  class="service-icon d-flex align-items-center justify-content-center"
                 >
                   <i class="fas fa-phone"></i>
                 </div>
                 <div>
-                  <h6>Phone</h6>
+                  <h6 class="mb-1">Phone</h6>
                   <p class="mb-0">+1 (555) 123-4567</p>
                 </div>
               </div>
-              <div class="d-flex align-items-center mb-3">
+
+              <!-- Email -->
+              <div class="d-flex align-items-center mb-4 gap-3">
                 <div
-                  class="service-icon me-3"
-                  style="width: 50px; height: 50px"
+                  class="service-icon d-flex align-items-center justify-content-center"
                 >
                   <i class="fas fa-envelope"></i>
                 </div>
                 <div>
-                  <h6>Email</h6>
+                  <h6 class="mb-1">Email</h6>
                   <p class="mb-0">info@technoweb.com</p>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Contact Form -->
           <div class="col-md-6 fade-in">
-            <form class="contact-form">
+            <form class="contact-form shadow p-4 rounded bg-white">
               <div class="mb-3">
                 <input
                   type="text"
@@ -537,7 +546,9 @@
                   required
                 ></textarea>
               </div>
-              <button type="submit" class="btn btn-custom">Send Message</button>
+              <button type="submit" class="btn btn-custom w-100">
+                Send Message
+              </button>
             </form>
           </div>
         </div>
@@ -795,7 +806,7 @@
           }, 1000);
         });
 
-    /*
+      /*
          Parallax Effect for Hero Section
          window.addEventListener("scroll", function () {
          const scrolled = window.pageYOffset;
