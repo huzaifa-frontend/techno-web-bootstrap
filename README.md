@@ -80,3 +80,4 @@ For suggestions or collaborations, feel free to reach out via GitHub.
 ---
 
 © 2025 Muhammad Huzaifa Karim
+
