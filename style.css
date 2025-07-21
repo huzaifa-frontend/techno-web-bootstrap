@@ -92,10 +92,12 @@ body {
 
 .carousel-item img {
   width: 100%;
-  height: 100vh; /* Full viewport height */
-  object-fit: cover;
+  height: 90vh; /* Full viewport height */
+  object-fit: cover; /* Show full image without cropping */
+  object-position: center;
   transition: transform 0.5s ease;
   filter: brightness(0.8);
+  background: #000;
 }
 
 .carousel-item:hover img {
@@ -241,7 +243,11 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%); /* Reverse gradient for hover */
+  background: linear-gradient(
+    135deg,
+    #764ba2 0%,
+    #667eea 100%
+  ); /* Reverse gradient for hover */
   transition: left 0.3s ease;
   z-index: -1;
 }
@@ -702,6 +708,7 @@ body {
   }
 
   .carousel-item img {
+    object-fit: contain;
     height: 70vh;
   }
 
@@ -736,12 +743,16 @@ body {
   .contact-form {
     padding: 1.5rem;
   }
-  
+
+  .carousel-item img {
+    object-fit: contain;
+    height: 70vh;
+  }
   .service-icon {
     width: 60px;
     height: 60px;
   }
-  
+
   .service-icon i {
     font-size: 1.5rem;
   }
