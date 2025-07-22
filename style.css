@@ -729,7 +729,7 @@ body {
   }
 
   .navbar-nav .nav-item {
-    margin: 5px 0; /* Stack vertically on mobile */
+    margin: 5px 0;
   }
 
   .contact-info {
