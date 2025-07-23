@@ -47,6 +47,7 @@ This is a modern, responsive tech website built using **HTML**, **CSS**, and **B
 
 ```
 📦 techno-web-bootstrap
+ ┣ 📂 assets
  ┣ 📄 index.html
  ┣ 📄 style.css
  ┣ 📄 README.md
