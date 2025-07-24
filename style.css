@@ -21,7 +21,7 @@ body {
   font-family: "Outfit", sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
-  padding-top: 80px; /* Add padding to prevent collision with fixed navbar */
+  padding-top: 80px;
 }
 
 /* Navigation Enhancements */
