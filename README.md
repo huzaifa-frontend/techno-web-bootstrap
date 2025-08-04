@@ -1,5 +1,12 @@
 # Techno Web Bootstrap
 
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Font Awesome](https://img.shields.io/badge/Font_Awesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white)
+![AOS](https://img.shields.io/badge/AOS-Animation-29ABE2?style=for-the-badge)
+![MIT License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
+
 🌐 **Live Demo:** [Click here to visit site](https://huzaifa-frontend.github.io/techno-web-bootstrap/)
 
 ## 📋 Overview
